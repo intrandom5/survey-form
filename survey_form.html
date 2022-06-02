@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/former.css" rel="stylesheet">
+</head>
+<body>
+    <div class="check-for-audio">
+        <span>오디오 재생 허용을 위해 클릭해 주세요</span>
+    </div>
+    <div class="container-fluid survey-1">
+        <div class="row col-12">
+            <h4 class="fw-bold text-center mt-3"></h4>
+            <div class="text-start button-prev">
+                <button type="button" class="btn btn-primary on-focus-btn" onmouseover="play_url('이전 페이지')">이전 페이지</button>
+            </div>
+            <div class="px-4">
+                <p class="fw-bold on-focus question" onmouseover="play_url('질문1')">학생은 올해(2021년) 학교 수업에서 참여한 진로, 직업교육 활동에 얼마나 만족하나요?
+                    각 활동에 대해 앞으로 더 참여하고 싶다면 (예)에, 참여하고 싶지 않다면 (아니오)에 표시해 주세요.
+                </p>
+                <form class="answer a1">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="a1" id="radioExample1" />
+                        <label class="form-check-label on-focus" for="radioExample1" onmouseover="play_url('만족')">
+                            만족
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="a1" id="radioExample2" />
+                        <label class="form-check-label on-focus" for="radioExample2" onmouseover="play_url('보통')">
+                            보통
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="a1" id="radioExample3" />
+                        <label class="form-check-label on-focus" for="radioExample3" onmouseover="play_url('불만족')">
+                            불만족
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="text-end">
+                <button type="button" class="btn btn-primary on-focus-btn" onclick="check_a1('.a1', 1)" onmouseover="play_url('다음 페이지')">다음 페이지</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid survey-2">
+        <div class="row col-12">
+            <h4 class="fw-bold text-center mt-3"></h4>
+            <div class="text-start button-prev">
+                <button type="button" class="btn btn-primary on-focus-btn" onclick="turn_page(2, 1)" onmouseover="play_url('이전 페이지')">이전 페이지</button>
+            </div>
+            <div class="px-4">
+                <p class="fw-bold on-focus question" onmouseover="play_url('질문2')">학생은 진로, 직업에 관한 상담(이야기)을 누구와 나누나요? 주로 이야기를 나누는 사람을 3명까지 선택해 주세요.</p>
+                <form class="answer a2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label class="form-check-label on-focus" for="flexCheckDefault" onmouseover="play_url('진로전담교사')">
+                                진로전담교사
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+                        <label class="form-check-label on-focus" for="flexCheckDefault2" onmouseover="play_url('담임교사')">
+                            담임교사
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+                        <label class="form-check-label on-focus" for="flexCheckDefault3" onmouseover="play_url('기타교사')">
+                            학교 내 기타 교사(지난해 담임교사, 개인적으로 친밀한 교사, 진로와 직업 교과 담당교사 등)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" />
+                        <label class="form-check-label on-focus" for="flexCheckDefault4" onmouseover="play_url('가족')">
+                            가족(보호자)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" />
+                        <label class="form-check-label on-focus" for="flexCheckDefault5" onmouseover="play_url('친구 또는 선후배')">
+                            친구 또는 선후배
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" />
+                        <label class="form-check-label on-focus" for="flexCheckDefault6" onmouseover="play_url('학교 밖 전문가')">
+                            학교 밖 전문가(사회복지사, 치료사, 학원교사 등)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7" />
+                        <label class="form-check-label on-focus" for="flexCheckDefault7" onmouseover="play_url('기타')">
+                            기타
+                        </label>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <textarea class="form-control text-form" id="form4Example3" rows="1"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-end">
+                <button type="button" class="btn btn-primary on-focus-btn" onclick="check_a2('.a2', 3, 'max')" onmouseover="play_url('다음 페이지')">
+                    다음 페이지
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-primary container" role="alert">
+        <div class="row">
+            <span></span>
+        </div>
+        <div class="row">
+            <button onclick="hide_alert()">확인</button>
+        </div>
+    </div>
+    <div class="zoom-div"> </div>
+    <script src="js/audio_list.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/zoom.js"></script>
+    <script src="js/check_validity.js"></script>
+</body>
+</html>
